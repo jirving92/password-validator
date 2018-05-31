@@ -34,22 +34,42 @@ public class Validator {
 
     // Returns 1 if the password contains a number, returns 0 otherwise
     public int passwordNumber() {
-
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isDigit(password.charAt(i))) {
+                return 1;
+            }
+        }
+        return 0;
     }
 
     // Returns 1 if the password contains an upper case letter, returns 0 otherwise
     public int passwordUpperCase() {
-
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isUpperCase(password.charAt(i))) {
+                return 1;
+            }
+        }
+        return 0;
     }
 
     // Returns 1 if the password contains a lower case letter, returns 0 otherwise
     public int passwordLowerCase() {
-
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isLowerCase(password.charAt(i))) {
+                return 1;
+            }
+        }
+        return 0;
     }
 
     // Returns 1 if the password does not contain whitespace, returns 0 otherwise
     public int passwordWhitespace() {
-
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isSpaceChar(password.charAt(i))) {
+                return 0;
+            }
+        }
+        return 1;
     }
 
 
