@@ -32,12 +32,36 @@ public class Validator {
         return 0;
     }
 
+    // Returns 1 if the password contains a number, returns 0 otherwise
+    public int passwordNumber() {
+
+    }
+
+    // Returns 1 if the password contains an upper case letter, returns 0 otherwise
+    public int passwordUpperCase() {
+
+    }
+
+    // Returns 1 if the password contains a lower case letter, returns 0 otherwise
+    public int passwordLowerCase() {
+
+    }
+
+    // Returns 1 if the password does not contain whitespace, returns 0 otherwise
+    public int passwordWhitespace() {
+
+    }
+
 
     // Adds up the number of tests passed and returns that number
     public int validate() {
         int passed = 0;
         passed += passwordText();
         passed += passwordLength();
+        passed += passwordNumber();
+        passed += passwordUpperCase();
+        passed += passwordLowerCase();
+        passed += passwordWhitespace();
         return passed;
     }
 }
