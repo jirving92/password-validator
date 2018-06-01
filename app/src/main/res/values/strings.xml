@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="edit_password">Enter Password</string>
+    <string name="submit_password">Submit</string>
 </resources>

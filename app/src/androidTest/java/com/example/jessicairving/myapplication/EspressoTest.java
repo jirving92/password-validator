@@ -17,13 +17,15 @@ import static android.support.test.espresso.assertion.ViewAssertions.*;
 public class EspressoTest {
 
     public static String testString = "Example123";
+    public static String testString2 = "password";
+    public static String testString3 = "example123";
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(
             MainActivity.class);
 
     @Test
-    public void changeUserInputText() {
+    public void strongPasswordTest() {
         //Write the password in the input field
         onView(withId(R.id.userInputField)).perform(typeText(testString));
 
@@ -32,10 +34,10 @@ public class EspressoTest {
 
         //Click the button
         onView(withId(R.id.button)).perform(click());
+
+        onView(withId(R.id.strengthDisplay)).check(matches(withText("Your password is strong")));
+
     }
 
-    public void passwordStrengthDisplay() {
-        onView(withID(R.id.strengthDisplay)).check(matches(withText("5")));
-    }
 
 }
