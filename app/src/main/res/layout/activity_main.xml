@@ -40,7 +40,7 @@
         android:layout_marginRight="164dp"
         android:layout_marginStart="162dp"
         android:layout_marginTop="87dp"
-        android:text="TextView"
+        android:text="Password Strength"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userInputField" />
